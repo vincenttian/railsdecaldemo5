@@ -7,3 +7,6 @@
   Description: <%= f.text_area :description %>
   <%= f.submit "Create" %>
 <% end %>
+<% if flash[:notice] %>
+	<%= flash[:notice] %>
+<% end %>

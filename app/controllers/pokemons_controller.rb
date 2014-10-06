@@ -4,8 +4,13 @@ class PokemonsController < ApplicationController
 
   def create
     @pokemon = Pokemon.new(pokemon_params)
-    @pokemon.save
-    redirect_to pokemon_path @pokemon
+    if not @pokemon.valid?
+      flash[:notice] = @pokemon.errors.messages.to_s
+      redirect_to new_pokemon_path
+    else
+      @pokemon.save 
+      redirect_to pokemon_path @pokemon
+    end
   end
 
   def show
