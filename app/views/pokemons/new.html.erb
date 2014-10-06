@@ -5,9 +5,21 @@
 	<%= flash[:notice] %>
 <% end %>
 
+
+<% if false %>
+
 <h1> Our Form to Create a Pokemon </h1>
 <%= form_for Pokemon.new, url: {action: "create"} do |f| %>
   Title: <%= f.text_field :name %>
   Description: <%= f.text_area :description %>
   <%= f.submit "Create" %>
+<% end %>
+
+<% end %>
+
+
+<%= simple_form_for Pokemon.new do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.button :submit %>
 <% end %>
