@@ -8,8 +8,7 @@ class PokemonsController < ApplicationController
       flash[:notice] = @pokemon.errors.messages.to_s
       redirect_to new_pokemon_path
     else
-      # can't save
-      Pokemon.new(pokemon_params).save 
+      Pokemon.new(pokemon_params).save
       redirect_to pokemon_path @pokemon
     end
   end
