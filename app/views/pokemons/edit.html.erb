@@ -1,0 +1,8 @@
+<h1>Pokemons#edit</h1>
+<p>Find me in app/views/pokemons/edit.html.erb</p>
+
+<%= form_for @pokemon do |f| %>
+  Title: <%= f.text_field :name %>
+  Description: <%= f.text_area :description %>
+  <%= f.submit "Update" %>
+<% end %>

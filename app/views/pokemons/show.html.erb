@@ -1,0 +1,12 @@
+<h1>Pokemons#show</h1>
+<p>Find me in app/views/pokemons/show.html.erb</p>
+
+<h1>Showing Pokemon Details</h1>
+<h3>Name</h3>
+<%= @pokemon.name %>
+<h3>Description</h3>
+<%= @pokemon.description %>
+
+<%= link_to 'Go back to form to create pokemon', new_pokemon_path %>
+<%= link_to 'Edit this pokemon', edit_pokemon_path %>
+<%= link_to 'Release this Pokemon', pokemon_path, :method => :delete %>
