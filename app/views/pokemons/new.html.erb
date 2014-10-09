@@ -2,14 +2,9 @@
 <p>Find me in app/views/pokemons/new.html.erb</p>
 
 
-<h1> Our Form to Create a Pokemon </h1>
-
-<% if flash[:notice] %>
-	<%= flash[:notice] %>
-<% end %>
-
-<%= form_for Pokemon.new, url: {action: "create"} do |f| %>
-  Title: <%= f.text_field :name %>
-  Description: <%= f.text_area :description %>
-  <%= f.submit "Create" %>
+<%= simple_form_for @pokemon do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%#= f.error :name, id: 'name_error' %>
+  <%= f.button :submit %>
 <% end %>
