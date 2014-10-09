@@ -31,6 +31,8 @@ gem 'spring',        group: :development
 
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'simple_form'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
