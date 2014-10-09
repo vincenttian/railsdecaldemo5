@@ -8,7 +8,7 @@ class PokemonsController < ApplicationController
       redirect_to pokemon_path @pokemon
     else
       flash[:notice] = @pokemon.errors.messages.to_s
-      redirect_to new_pokemon_path
+      render new_pokemon_path
     end
   end
 
