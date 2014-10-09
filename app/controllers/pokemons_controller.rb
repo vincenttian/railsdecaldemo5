@@ -8,7 +8,7 @@ class PokemonsController < ApplicationController
     if @pokemon.save
       redirect_to @pokemon
     else
-      render "new"
+      render new_pokemon_path
     end
   end
 
